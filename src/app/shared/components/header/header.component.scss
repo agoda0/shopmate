@@ -1,0 +1,19 @@
+@import './../../../../styles.scss';
+nav{
+    background-color:$bgColor;
+}
+.navbar-expand-lg .navbar-nav .nav-link{
+    color: #fff;
+}
+.navbar-brand{
+    color: $brimaryColor;
+    text-transform: uppercase;
+    letter-spacing:3px;
+}
+.navbar-toggler{
+    background-color: #fff;
+    border: 1px solid #fff;
+}
+.navbar-toggler:focus{
+    box-shadow: 0 0 5px #fff;
+}

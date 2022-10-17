@@ -1,0 +1,49 @@
+<div class="cartBox">
+    <h1>Shopping Cart</h1>
+    <div class="headCart">
+        <p>You Have <span>{{cartProducts.length}}</span> Items In Your Cart</p>
+        <button (click)="clearCart()">Clear Shopping Cart</button>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <td>Image</td>
+                <td class="hidden">Name</td>
+                <td class="hidden1">Price</td>
+                <td>Quantity</td>
+                <td class="hidden1">Total</td>
+                <td></td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let product of cartProducts ; let id = index">
+                <td><img src="{{product.item.image}}"></td>
+                <td class="hidden">{{product.item.title}}</td>
+                <td class="hidden1">{{product.item.price}} L.E</td>
+                <td>
+                    <div class="quantity">
+                        <button class="btn btn-dark hidden" (click)="minsQnty(id)">-</button>
+                        <input class="form-control" type="number" min="1" [(ngModel)]="product.quantity" (change)="detectChange()">
+                        <button class="btn btn-dark hidden" (click)="plusQnty(id)">+</button>
+                    </div>
+                </td>
+                <td class="hidden1">{{product.item.price * product.quantity}} L.E</td>
+                <td>
+                    <button class="btn btn-danger" (click)="deleteProduct(id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td class="hidden"></td>
+                <td class="hidden1"></td>
+                <td class="hidden1"></td>
+                <td>Total : {{getCartTotal()}} L.E</td>
+                <td><button class="btn btn-success" (click)="addCart()" >Order Now</button></td>
+            </tr>
+        </tfoot>
+    </table>
+    <div class="alert alert-success" *ngIf="success" > <strong>Well Done</strong> Your Order Is Successfully Added </div>
+</div>

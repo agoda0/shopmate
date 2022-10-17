@@ -28,9 +28,13 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/ngx-spinner/animations/square-loader.css",
+              "node_modules/bootstrap/scss/bootstrap.scss",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -103,5 +107,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "73691b6a-24d2-4d4e-a390-1cbd6af6b31f"
   }
 }

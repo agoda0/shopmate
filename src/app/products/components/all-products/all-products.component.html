@@ -1,0 +1,11 @@
+<div class="products my-5">
+    <div class="my-3  w-25 ">
+        <app-select (selcedValu) = "filterValue($event)" [title]="'Categories'" [data] = "categories" ></app-select>
+    </div>
+    <div class="row">
+        <ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" color = "rgb(246, 44, 92)" type = "square-loader" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
+        <div *ngFor="let product of products" class=" col-xl-3 col-lg-4 col-md-6 col-sm-12">
+            <app-product [data] = "product" (item)="addToCart($event)"></app-product>
+        </div>
+    </div>
+</div>

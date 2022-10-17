@@ -1,0 +1,17 @@
+.details{
+    margin: 100px 0;
+    height: 600px;
+    .row{
+        justify-content: center;
+        align-items: center;
+    }
+    ul{
+        li{
+            font-size: 22px;
+            margin: 30px 0;
+        }
+    }
+    img{
+        width: 100%;
+    }
+}

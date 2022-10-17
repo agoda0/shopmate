@@ -1,0 +1,18 @@
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" color = "rgb(246, 44, 92)" type = "square-loader" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
+<div class="details">
+    <div class="row">
+        <div class="col-md-5">
+            <img src="{{productDetails.image}}" alt="ProductImage">
+        </div>
+        <div class="col-md-7 info">
+            <ul class="list-unstyled">
+                <li><strong>Title : </strong> {{productDetails.title}}</li>
+                <li><strong>Category : </strong> {{productDetails.category}}</li>
+                <li><strong>Description : </strong> {{productDetails.description}}</li>
+                <li><strong>Rate : </strong> {{productDetails.rating.rate}}</li>
+                <li><strong>Count : </strong> {{productDetails.rating.count}}</li>
+                <li><strong>Price : </strong> {{productDetails.price}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
